@@ -11,7 +11,7 @@ jobs:
         node-version: [10.x, 12.x]
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -24,14 +24,14 @@ jobs:
         env:
           CI: true
 
-  deploy:
-    runs-on: ubuntu-latest
+  publish:
+    runs-on: macos-latest
 
     needs: build
     if: github.ref == 'refs/heads/master'
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Use Node.js (NPM registry)
         uses: actions/setup-node@v1
         with:
