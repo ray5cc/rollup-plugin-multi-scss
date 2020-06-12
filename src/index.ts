@@ -11,31 +11,9 @@ import fileSize from 'filesize';
 
 import { compileScssToCss, getDest } from './utils';
 
-export interface RollupPluginMultiScssOptions {
-    //include SCSS/CSS file you want to include, like ['/**/*.css', '/**/*.scss'], if you pass include, the default list will be overwrite
-    include?: string[]; // default to ['/**/*.css', '/**/*.scss']
+import RollupPluginMultiScssOptions from './RollupPluginMultiScssOptions';
 
-    // File you want to exclude, like ['src/useless/useless.scss']
-    exclude?: string[]; // default to []
-
-    // SCSS bundling include path, which is used to find required scss file
-    includePaths?: string[]; // default to ['node_modules'] and current cwd
-
-    // Output path. default to same as js output
-    output?: string;
-
-    // Assets storage folder
-    assetsPath?: string; // default to 'img'
-
-    // Prefix content which need add to each scss file. default to empty
-    prefix?: string;
-
-    // Custom processor function. default to undefined.
-    processor?: (styles: LazyResult[], css: string) => void;
-
-    // Keep assets name with hash. default to true
-    keepName?: boolean;
-}
+export { RollupPluginMultiScssOptions };
 
 const jsFilter = createFilter(
     ['/**/*.js', '/**/*.jsx', '/**/*.ts', '/**/*.tsx'],

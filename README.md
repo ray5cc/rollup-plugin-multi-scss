@@ -1,4 +1,4 @@
-# rollup-plugin-multi-scss
+# rollup-plugin-multi-scss ![build](https://github.com/luvies/node-evaluator/workflows/Node%20CI/badge.svg)
 The rollup plugin compile scss to css which required by your JavaScript, and copy the assets required by scss/css file to your target folder.
 ## Installation
 ```console

@@ -1,7 +1,7 @@
 import { resolve } from 'path';
 import sass from 'node-sass';
 import { NormalizedOutputOptions } from 'rollup';
-import { RollupPluginMultiScssOptions } from './index';
+import RollupPluginMultiScssOptions from './RollupPluginMultiScssOptions';
 import { LazyResult } from 'postcss';
 
 /**
