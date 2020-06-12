@@ -10,7 +10,8 @@
     "outDir":"./lib",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "listEmittedFiles": true
   },
   "include": ["./src/**/*"],
   "exclude": [
