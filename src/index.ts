@@ -112,12 +112,19 @@ export default function multiScss({
                                 )
                             );
                             let scss = styles.map(({ css }) => css).join('');
-                            const css = compileScssToCss(
+                            let css = compileScssToCss(
                                 scss,
                                 styles,
                                 options,
                                 _includePaths
                             );
+
+                            if (
+                                processor &&
+                                typeof processor.processCSS === 'function'
+                            ) {
+                                css = processor.processCSS(css);
+                            }
 
                             if (typeof css !== 'string' || !css.length) {
                                 return;
