@@ -20,7 +20,7 @@ export default interface RollupPluginMultiScssOptions {
     prefix?: string;
 
     // Custom processor function. default to undefined.
-    processor?: { processCSS: (css: string) => string };
+    processor?: (styles: LazyResult[], css: string) => void;
 
     // Keep assets name with hash. default to true
     keepName?: boolean;
