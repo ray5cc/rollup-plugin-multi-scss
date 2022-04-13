@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@rollup/pluginutils": "^3.1.0",
-    "asset-hash": "^3.0.5",
+    "asset-hash": "^3.2.0",
     "chalk": "^4.0.0",
     "filesize": "^6.1.0",
     "fs-extra": "^9.0.1",
